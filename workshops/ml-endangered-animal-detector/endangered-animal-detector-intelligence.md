@@ -1,4 +1,5 @@
 # Azure Custom Vision Service
+
 ## Creating an Endangered Animal Detector Classification Algorithm
 
 Using Azure Custom Vision service you can start to build your own personalised image classification and object detection algorithms with very little code. In this section we will create en endangered animal detector classification algorithm using the images provided in this repository
@@ -19,14 +20,16 @@ First create a Custom Vision instance in your Azure account.
 * On the description pane for Custom Vision click **Create**.
 
 ![Custom vision service in the Azure Portal](docs-images/custom-vision-azure.JPG)
+
 * Enter details to create
-    * a **name** for the service
+  * a **name** for the service
     * select your **subscription**
-        * *[Note] Choose the Data Center geographically closest to you*
+      * *[Note] Choose the Data Center geographically closest to you*
     * Choose the **F0 tier** for both 'Prediction pricing tier' and Training pricing tier
 * For **'Resource group'** click 'Create new' and enter a name for the folder of services and choose OK. Example: student-ai-workshop
 
 ![Create a new resource group name in pop out window](docs-images/create-resource-group-portal.JPG)
+
 * Click **Create**
 ![Full details to create Custom Vision service in the Azure Portal](docs-images/custom-vision-service-details.JPG)
 
@@ -39,7 +42,6 @@ This will take you to your Custom Vision service page - this is where you can ac
 Note down your **'Key'**
 
 ![Review settings and copy down your service key](docs-images/custom-vision-portal-resource.JPG)
-
 
 Now we can build our classifier, navigate to [https://www.customvision.ai](https://www.customvision.ai) and choose sign in. Sign in with your Azure credentials account
 
@@ -72,7 +74,7 @@ Once successful you receive a confirmation message and you should see your image
 
 ![Arctic Fox images uploaded](docs-images/workspace-one-category.JPG)
 
-Now complete the same steps of uploading and tagging images for the other 2 animal categories in the folder. 
+Now complete the same steps of uploading and tagging images for the other 2 animal categories in the folder.
 
 For each animal:
 
@@ -124,13 +126,10 @@ You can now select the **Prediction URL** button to gain all information you nee
 
 ![Prediction URL information](docs-images/prediction-url-details.JPG)
 
-## Great work! 
+## Great work
 
 you have created your endangered animal detector classification model using the Azure Custom Vision Service
 
-## Continue the workshop ...
+## Continue the workshop
 
 Build this intelligence into a process by following the next step of the tutorial **[HERE](endangered-animal-detector-pipeline.md)**
-
-
-

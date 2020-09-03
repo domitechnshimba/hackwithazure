@@ -1,4 +1,4 @@
-# O365 output for Logic App 
+# O365 output for Logic App
 
 **If you have an office 365 account you can edit the logic app to send you a personalised email instead of outputting the data to another storage account.**
 

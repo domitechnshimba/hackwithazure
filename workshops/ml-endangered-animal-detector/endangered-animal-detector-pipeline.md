@@ -1,4 +1,5 @@
 # Azure Logic Apps
+
 ## Creating serverless process to analyse an image and email you
 
 In this section you will build an Azure Logic App to consume your Custom Vision Endangered Animal Detector classification application
@@ -25,7 +26,6 @@ On the storage account creation page enter options to setup your storage account
 * **Replication:** Locally-redundant storage (LRS)
 * **Access Tier:** Hot
 
-
 Select **Review + create**, confirm validation is passed and then select **Create**
 
 ![Storage account details to follow](docs-images/storage-account-details.JPG)
@@ -40,7 +40,7 @@ We need to add a container to the storage account to store our images and result
 
 * Select the **+ Container** button
 * Create a name for the container
-    * for example the **endangeredanimalsdetector** account would have an **images** container/folder
+  * for example the **endangeredanimalsdetector** account would have an **images** container/folder
     * for example the **endangeredanimalsoutput** account would have a **results** container/folder
 * For the public access level setting select **Container (anonymous read access for containers and blobs)**
 
@@ -105,7 +105,7 @@ Then choose **next step**. Type **custom vision** and select the **Classify an i
 
 ![Custom vision logic app selection](docs-images/custom-vision-logic-app.JPG)
 
-Now we need to fill in the details to connect to our custom vision service: 
+Now we need to fill in the details to connect to our custom vision service:
 
 * **Connection Name:** enter a connection name you will associate with this logic app connector. (example: endangeredanimalcustomvision)
 * **Prediction Key:** In the **Azure Portal**, in your resource group folder you will see two services like below - select the one ending in **'_Prediction'**. In there copy the key and put in this box in logic apps
@@ -117,6 +117,7 @@ Completed details below:
 ![Connection details for custom vision](docs-images/custom-vision-connection.JPG)
 
 Now lets enter the Project details for your Custom Vision service:
+
 * **Project ID:** Find the project ID from the settings logo in the top right of the Custom Vision webpage
 ![Find Project ID from Custom Vision service](docs-images/find-project-id.JPG)
 * **Published Name:** Enter **Iteration1** or whatever you named your published model. You find this information in the custom vision UI select Performance tab
@@ -144,23 +145,25 @@ Set the condition to be **Predictions Probability** greater than 0.7 (as shown b
 
 In the **If True** box select **Add an action**
 
-> You have two options to continue with: 
+> You have two options to continue with:
+>
 > * If you have an Office 365 subscription with your university account - [check out the personalized email output here](endangered-animal-detector-O365-output.md)
 > * Else, carry on with the instructions below and output the data to an output storage account
 
 First connect to your storage account in the Logic App:
+
 * Select 'Azure Blob Storage'
 * Then 'Create Blob'
 * Create a connection name, for example result-storage
 * Select your output storage account
 
 Next setup the content of the output blob:
+
 * folder path is your 'results' container within your output storage account. You can use the folder icon to select this
 * Blob name select 'Classify an image url' and then 'Id'.csv
 * Blob content select 'Classify an image url' 'Predictions Tag' : 'Predictions Probability'
 
 ![Create Blob Storage content](docs-images/create-blob-content.JPG)
-
 
 Finally save the logic app in the top action bar
 
@@ -186,7 +189,6 @@ In the final part of the run you can review the blob storage output
 and also find the file in your output storage account results folder
 ![CSV Blob Storage account](docs-images/csv-blob-output.JPG)
 
-
-## Congratulations! 
+## Congratulations
 
 You have created an end-to-end process using an AI service.

@@ -15,8 +15,8 @@ Using your Azure subscription, you will be able to deploy your code to the cloud
 You can configure an Azure App Service and deploy your code from inside Visual Studio Code.
 
 1. Open the command palette:
-  1. On Windows, press Ctrl+Shift+P
-  1. On MacOS, press Cmd+Shift+P
+1. On Windows, press Ctrl+Shift+P
+1. On MacOS, press Cmd+Shift+P
 
 1. Select *Azure App Service: Deploy to Web App...*
   
